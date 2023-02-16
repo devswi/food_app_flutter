@@ -23,6 +23,7 @@ class App extends StatelessWidget {
         primaryColor: primaryColor,
         highlightColor: Colors.transparent,
         splashColor: Colors.transparent,
+        scaffoldBackgroundColor: Colors.white,
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.white,
           selectedItemColor: primaryColor,

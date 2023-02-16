@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/components/food_rate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FoodCard extends StatelessWidget {
@@ -23,7 +24,6 @@ class FoodCard extends StatelessWidget {
           BoxShadow(
             offset: Offset(0, 4),
             blurRadius: 10,
-            spreadRadius: 0,
             color: Color.fromRGBO(0, 0, 0, 0.1),
           ),
         ],
@@ -110,22 +110,8 @@ class FoodCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 20),
-                  Wrap(
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    spacing: 5,
-                    children: const [
-                      Icon(
-                        Icons.star,
-                        size: 12,
-                      ),
-                      Text(
-                        '5.0',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
+                  const FoodRate(
+                    rate: 5.0,
                   ),
                 ],
               ),
@@ -136,7 +122,7 @@ class FoodCard extends StatelessWidget {
             child: Hero(
               tag: imagePath,
               child: Image.asset(
-                'assets/pizza1.png',
+                imagePath,
                 width: 200,
               ),
             ),
